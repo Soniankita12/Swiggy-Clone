@@ -2,8 +2,9 @@
   "name": "namastereact",
   "version": "1.0.0",
   "description": "this is my react journey which is going to be complete soon",
-  "main": "index.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build":"parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -27,5 +28,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  }
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
