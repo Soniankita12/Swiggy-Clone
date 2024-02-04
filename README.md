@@ -24,3 +24,19 @@ while we create build for production (npx parcel build index.html) we get an err
 "main": "index.js", in package.json file  it's 
 a way to tell npm that it's entry point in our app so we will remove this from our package.json file
 
+//project making
+
+* Header
+   -logo
+   -Nav Items
+* Body
+  -Search-Bar
+  -RestaurantContainer
+    -Restaurant-Card
+      -Img
+      -Name Of Restaurant, Star Rating, cuisins etc
+*Footer
+ -copyright
+ -Links
+ -Address
+ -Contact-Info
