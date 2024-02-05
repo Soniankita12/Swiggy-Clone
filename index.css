@@ -1,11 +1,16 @@
 .header {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  /* border: 1px solid rgb(198, 192, 192);
+  border-radius: 10px; */
+  background-color: rgb(247, 245, 245);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  margin-top: 0px;
 }
 .logo{
 width: 90px;
-height: 90px;
+height: 100%;
 
 }
 .navbar-items{
