@@ -9,7 +9,7 @@ const RestaurantCard = (props) => {
     deliveryTime,
     cloudinaryImageId
 
-  } = resData?.data;
+  } = resData?.info;
   return (
     <div className="res-card">
       <img

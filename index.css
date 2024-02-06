@@ -1,12 +1,14 @@
 .header {
   display: flex;
+  margin: 0px;
+  padding: 0px;
   justify-content: space-between;
   /* border: 1px solid rgb(198, 192, 192);
   border-radius: 10px; */
   background-color: rgb(247, 245, 245);
   position: -webkit-sticky; /* Safari */
   position: sticky;
-  margin-top: 0px;
+  top: 0px;
 }
 .logo{
 width: 90px;
@@ -31,12 +33,13 @@ font-size: 24px;
     cursor: pointer;
 }
 .res-card{
-    width: 200px;
-    height:auto;
+    width: 225px;
+    height:360;
     padding: 5px;
-    margin: 15px;
+    margin: 20px;
     border:1px solid rgb(245, 235, 235);
     border-radius: 12px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .res-card:hover{
     /* border: 1px solid rgb(150, 137, 137); */

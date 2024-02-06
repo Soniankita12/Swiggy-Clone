@@ -1,10 +1,10 @@
 const resList = [
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "399522",
       name: "KFC",
-      cuisines: ["Burgers", "American", "Snacks", "Fast Food"],
+      cuisines: ["American", "Snacks", "Fast Food"],
       avgRating: 3.6,
       costForTwo: 250,
       cloudinaryImageId: "f01666ac73626461d7455d9c24005cd4",
@@ -13,7 +13,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "399523",
       name: "North ka chaska",
       cuisines: ["Butter-paneer", "Paratha", " Sweets"],
@@ -25,7 +25,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "399524",
       name: "Cake Factory",
       cuisines: ["Cakes", "Cookies", "Pastries"],
@@ -37,7 +37,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "399525",
       name: "Cheesccakes",
       cuisines: ["Cheesccakes", "Cookies", "Sweets"],
@@ -49,7 +49,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "399526",
       name: "Meghana Foods",
       cuisines: ["Pulao", "Biryani", "Sweets"],
@@ -61,7 +61,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "399527",
       name: "Meghalay Cuisins",
       cuisines: ["Dumplings", "Soups", "Thupka"],
@@ -73,7 +73,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "399528",
       name: "Pizza Homes",
       cuisines: ["Pizza", "Bakery", "Sweets"],
@@ -85,7 +85,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "399529",
       name: "Momo Only",
       cuisines: ["Momo", "Dumpling"],
@@ -97,7 +97,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "399520",
       name: "Full Bowl",
       cuisines: ["North Indian", "Chinese"],
@@ -109,7 +109,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "399533",
       name: "Full Coffee Wave",
       cuisines: ["Tea", "Coffee", "Croissant"],
@@ -121,7 +121,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "399532",
       name: "Belgian Waffle",
       cuisines: ["Waffle", "Desserts"],
@@ -133,7 +133,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "399531",
       name: "Indian Kichadi",
       cuisines: ["Kichadi", "Rice"],
@@ -144,4 +144,4 @@ const resList = [
     },
   },
 ];
-  export default resList;
+export default resList;
