@@ -7,6 +7,8 @@ const Body = () => {
   // same way array destucturing
   const arr = useState([]);
   const [listOfRestaurants, setlistOfRestaurants] = arr;
+  const [filteredRestraunt,setfilteredRestraunt] = useState([]);
+  const [searchText, setsearchText] = useState("");
   useEffect(() => {
     fetchData();
   }, []);
@@ -22,22 +24,46 @@ const Body = () => {
     setlistOfRestaurants(
       json?.data?.cards[1]?.card?.card?.gridElements.infoWithStyle.restaurants
     );
+    setfilteredRestraunt(
+      json?.data?.cards[1]?.card?.card?.gridElements.infoWithStyle.restaurants
+    );
   };
 
-  // conditional rendering
-  if (listOfRestaurants.length === 0) {
-    return <ShimmerUi />;
-  }
-
-  return (
+  return listOfRestaurants.length === 0 ? (
+    <ShimmerUi />
+  ) : (
     <div className="body">
       <div className="filter">
+        <div className="search">
+          <input
+            type="text"
+            value={searchText}
+            onChange={(e) => {
+              setsearchText(e.target.value);
+            }}
+            className="search-box"
+          />
+          <button
+            onClick={() => {
+              // filter restaurant by name and update ui
+              console.log("search is clicked");
+              const filteredRestraunts = listOfRestaurants.filter(
+                (restaurant) =>
+                  restaurant.info.name
+                    .toLowerCase()
+                    .includes(searchText.toLowerCase())
+              );
+              setfilteredRestraunt(filteredRestraunts);
+            }}>
+            Search
+          </button>
+        </div>
         <button
           className="filter-btn"
           onClick={() => {
-            setlistOfRestaurants((res) =>
-              res.filter((resturant) => resturant.info.avgRating >= 4.3)
-            );
+          setlistOfRestaurants((res) =>
+               res.filter((resturant) => resturant.info.avgRating >= 4.3)
+             );
             console.log(listOfRestaurants);
           }}>
           Top Rated Restaurants
@@ -54,7 +80,7 @@ const Body = () => {
       </div>
 
       <div className="restro-card">
-        {listOfRestaurants.map((restaurant, index) => (
+        {filteredRestraunt.map((restaurant, index) => (
           <RestaurantCard key={index} resData={restaurant} />
         ))}
       </div>
