@@ -39,8 +39,8 @@ const resList = [
     type: "restaurant",
     info: {
       id: "399525",
-      name: "Cheesccakes",
-      cuisines: ["Cheesccakes", "Cookies", "Sweets"],
+      name: "Cheesecakes",
+      cuisines: ["Cheesecakes", "Cookies", "Sweets"],
       avgRating: 4.5,
       costForTwo: 500,
       cloudinaryImageId: "b318c0b4bc2169550145ace1d6e791a2",

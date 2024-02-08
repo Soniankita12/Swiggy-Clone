@@ -7,15 +7,15 @@ const RestaurantCard = (props) => {
     avgRating,
     costForTwo,
     deliveryTime,
-    cloudinaryImageId
-
+    cloudinaryImageId,
   } = resData?.info;
   return (
     <div className="res-card">
       <img
         className="res-image"
         src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId
+          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
+          cloudinaryImageId
         }
         alt="res image"
       />

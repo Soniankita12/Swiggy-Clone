@@ -7,7 +7,7 @@ const Body = () => {
   // same way array destucturing
   const arr = useState([]);
   const [listOfRestaurants, setlistOfRestaurants] = arr;
-  const [filteredRestraunt,setfilteredRestraunt] = useState([]);
+  const [filteredRestraunt, setfilteredRestraunt] = useState([]);
   const [searchText, setsearchText] = useState("");
   useEffect(() => {
     fetchData();
@@ -61,9 +61,9 @@ const Body = () => {
         <button
           className="filter-btn"
           onClick={() => {
-          setlistOfRestaurants((res) =>
-               res.filter((resturant) => resturant.info.avgRating >= 4.3)
-             );
+            setlistOfRestaurants((res) =>
+              res.filter((resturant) => resturant.info.avgRating >= 4.3)
+            );
             console.log(listOfRestaurants);
           }}>
           Top Rated Restaurants

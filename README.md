@@ -9,7 +9,7 @@
 -Image optimisation
 // most expensive thing in a web browser is to load images in your page
 if you use parces it will use image optimization
--Minification of file 
+-Minification of file
 -Bundling
 -compression of file
 -Consistent Hashing
@@ -20,23 +20,27 @@ if you use parces it will use image optimization
 -Https
 -Tree shaking - remove unused code
 -Different dev and prod bundles
-while we create build for production (npx parcel build index.html) we get an error 
-"main": "index.js", in package.json file  it's 
+while we create build for production (npx parcel build index.html) we get an error
+"main": "index.js", in package.json file it's
 a way to tell npm that it's entry point in our app so we will remove this from our package.json file
 
 //project making
 
-* Header
-   -logo
-   -Nav Items
-* Body
+- Header
+  -logo
+  -Nav Items
+- Body
   -Search-Bar
   -RestaurantContainer
-    -Restaurant-Card
-      -Img
-      -Name Of Restaurant, Star Rating, cuisins etc
-*Footer
- -copyright
- -Links
- -Address
- -Contact-Info
+  -Restaurant-Card
+  -Img
+  -Name Of Restaurant, Star Rating, cuisins etc
+  \*Footer
+  -copyright
+  -Links
+  -Address
+  -Contact-Info
+
+// there are two types of routing you can have in your application(web-apps)
+1-client side routing
+2-server side routing
