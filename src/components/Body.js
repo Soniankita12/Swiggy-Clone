@@ -1,5 +1,7 @@
-import RestaurantCard from "./ReturantCard";
 import { useEffect, useState } from "react";
+import { Res_List_Api } from "../../utils/constants";
+import { Link } from "react-router-dom";
+import RestaurantCard from "./ReturantCard";
 import ShimmerUi from "./ShimmerUi";
 const Body = () => {
   // State variable(super powered react variable(by using hooks))
@@ -15,7 +17,7 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.65420&lng=77.23730&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+     Res_List_Api
     );
 
     const json = await data.json();
@@ -64,7 +66,6 @@ const Body = () => {
             setlistOfRestaurants((res) =>
               res.filter((resturant) => resturant.info.avgRating >= 4.3)
             );
-            console.log(listOfRestaurants);
           }}>
           Top Rated Restaurants
         </button>
@@ -80,8 +81,13 @@ const Body = () => {
       </div>
 
       <div className="restro-card">
-        {filteredRestraunt.map((restaurant, index) => (
-          <RestaurantCard key={index} resData={restaurant} />
+        {filteredRestraunt.map((restaurant) => (
+          <Link
+            className="link"
+            key={restaurant.info.id}
+            to={"/restaurants/" + restaurant.info.id}>
+            <RestaurantCard resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>
