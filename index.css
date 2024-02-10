@@ -91,3 +91,10 @@
   cursor: pointer;
   padding: 0 20px;
 }
+.contact-header{
+  text-align: center;
+}
+.user-card{
+  padding:10px;
+  border:1px solid black;
+}

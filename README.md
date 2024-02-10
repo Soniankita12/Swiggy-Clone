@@ -44,3 +44,8 @@ a way to tell npm that it's entry point in our app so we will remove this from o
 // there are two types of routing you can have in your application(web-apps)
 1-client side routing
 2-server side routing
+** Class based component
+a class based components is a class which extend react.component and it has a render method which return some peice of jsx
+
+** functional Based component
+functinal component is a fun that return some jsx
