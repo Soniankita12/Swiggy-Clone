@@ -15,8 +15,14 @@ class UserClass extends React.Component {
         <h2>{location}</h2>
         <h2>{designation}</h2>
         <h2>{this.state.count}</h2>
+        <h2>{this.state.count}</h2>
         <h2>{this.state.count2}</h2>
-        <button onClick={()=>{this.setState({count:this.state.count+1})}}>count button</button>
+        <button
+          onClick={() => {
+            this.setState({ count: this.state.count + 1 });
+          }}>
+          count button
+        </button>
         <p>
           <a href="mailto:someone@example.com">Send email</a>
         </p>
