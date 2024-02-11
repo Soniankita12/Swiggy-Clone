@@ -39,7 +39,7 @@ a way to tell npm that it's entry point in our app so we will remove this from o
   -copyright
   -Links
   -Address
-  -Contact-Info
+  -Contact-Info and other info
 
 // there are two types of routing you can have in your application(web-apps)
 1-client side routing
