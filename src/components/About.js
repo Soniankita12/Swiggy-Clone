@@ -4,7 +4,7 @@ import { Component } from "react";
 class About extends Component {
   constructor(props){
     super(props);
-    console.log("constructor called");
+    console.log("constructor ");
   }
   render(){
   return (
