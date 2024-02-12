@@ -1,6 +1,12 @@
 import User from "./User";
 import UserClass from "./UserClass";
-const About = () => {
+import { Component } from "react";
+class About extends Component {
+  constructor(props){
+    super(props);
+    console.log("constructor");
+  }
+  render(){
   return (
     <div>
       <h1>About</h1>
@@ -9,5 +15,6 @@ const About = () => {
       <UserClass name="Ankita soni(class) " location="Bangalore(C)" designation ="SDE1(class)"/>
     </div>
   );
+  }
 };
 export default About;
