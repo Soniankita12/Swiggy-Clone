@@ -3,31 +3,30 @@ class UserClass extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
-      count2: 1,
+    userInfo:{name:"dummy name"
+  ,location:"Default"},
     };
-    console.log( this.props.name+" child constructor ");
+
   }
-  componentDidMount(){
-    console.log(this.props.name + "child component did mount");
+ async componentDidMount(){
+  const data = await fetch("https://api.github.com/users/soniankita12");
+  const json= await data.json();
+  this.setState({userInfo:json});
+   
+  }
+  componentWillUnmount(){
+    
   }
   render() {
-    console.log("child render");
-    const { name, location, designation } = this.props;
+    const { name, location, company, avatar_url } = this.state.userInfo;
     return (
       <div className="user-card">
         <h2>{name}</h2>
+        <img src={avatar_url}/>
         <h2>{location}</h2>
-        <h2>{designation}</h2>
-        <h2>{this.state.count}</h2>
-        <h2>{this.state.count}</h2>
-        <h2>{this.state.count2}</h2>
-        <button
-          onClick={() => {
-            this.setState({ count: this.state.count + 1 });
-          }}>
-          count button
-        </button>
+        <h2>{company}</h2>
+
+        <button onClick={() => {}}>count button</button>
         <p>
           <a href="mailto:someone@example.com">Send email</a>
         </p>
@@ -36,3 +35,16 @@ class UserClass extends React.Component {
   }
 }
 export default UserClass;
+/* 
+mounting life cycle
+ constructor
+ render withdummy data
+  <htmldummy/>
+ component did mount 
+  <Apicall>
+   this.setState
+update--
+ renderm (with apidata)
+ <html(newapi data)>
+ component did update
+*/
