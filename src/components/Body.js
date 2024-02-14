@@ -3,6 +3,7 @@ import { Res_List_Api } from "../../utils/constants";
 import { Link } from "react-router-dom";
 import RestaurantCard from "./ReturantCard";
 import ShimmerUi from "./ShimmerUi";
+import useOnlineStatus from "../../utils/useOnlineStatus";
 const Body = () => {
   // State variable(super powered react variable(by using hooks))
   //   const [listOfRestaurants, listOfRestaurants] = useState(resList);
@@ -30,7 +31,9 @@ const Body = () => {
       json?.data?.cards[1]?.card?.card?.gridElements.infoWithStyle.restaurants
     );
   };
-
+  const OnlineStatus =useOnlineStatus();
+  if(OnlineStatus === false)
+  return (<div><h1>you are offline</h1></div>);
   return listOfRestaurants.length === 0 ? (
     <ShimmerUi />
   ) : (
