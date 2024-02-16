@@ -38,17 +38,18 @@ const Body = () => {
     <ShimmerUi />
   ) : (
     <div className="body">
-      <div className="filter">
-        <div className="search">
+      <div className="filter flex">
+        <div className="m-2 p-2">
           <input
             type="text"
             value={searchText}
             onChange={(e) => {
               setsearchText(e.target.value);
             }}
-            className="search-box"
+            className=" border border-inherit"
           />
           <button
+            className="cursor-pointer px-4 py-1 m-4 bg-green-500 rounded-lg"
             onClick={() => {
               // filter restaurant by name and update ui
               console.log("search is clicked");
@@ -63,27 +64,29 @@ const Body = () => {
             Search
           </button>
         </div>
-        <button
-          className="filter-btn"
-          onClick={() => {
-            setlistOfRestaurants((res) =>
-              res.filter((resturant) => resturant.info.avgRating >= 4.3)
-            );
-          }}>
-          Top Rated Restaurants
-        </button>
-        <button
-          className="filter-btn"
-          onClick={() => {
-            setlistOfRestaurants((res) =>
-              res.filter((resturant) => resturant.info.costForTwo > 200)
-            );
-          }}>
-          Affordable meals
-        </button>
+        <div className="m-2 p-2 flex item-center">
+          <button
+            className=" cursor-pointer px-4 py-1 m-4 bg-green-500 rounded-lg"
+            onClick={() => {
+              setlistOfRestaurants((res) =>
+                res.filter((resturant) => resturant.info.avgRating >= 4.3)
+              );
+            }}>
+            Top Rated Restaurants
+          </button>
+          <button
+            className=" cursor-pointer px-4 py-1 m-4 bg-green-500 rounded-lg"
+            onClick={() => {
+              setlistOfRestaurants((res) =>
+                res.filter((resturant) => resturant.info.costForTwo > 200)
+              );
+            }}>
+            Affordable meals
+          </button>
+        </div>
       </div>
 
-      <div className="restro-card">
+      <div className="flex flex-wrap">
         {filteredRestraunt.map((restaurant) => (
           <Link
             className="link"

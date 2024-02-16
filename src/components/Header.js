@@ -11,30 +11,30 @@ const Header = () => {
       <div className="logo-container">
         <img className="w-40" src={LOGO_URL} alt="Food Delivery App" />
       </div>
-      <div className="navbar-items">
+      <div className="flex items-center ">
         <ul className="flex p-4 m-4 ">
-          <li className="online">{OnlineStatus ? "🟢online" : "🔴offline"} </li>
-          <li>
+          <li className="px-4">{OnlineStatus ? "🟢online" : "🔴offline"} </li>
+          <li className="px-4">
             <Link to="/" className="link">
               Home
             </Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/groceries" className="link">
               Groceries
             </Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/about" className="link">
               About Us
             </Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/contact" className="link">
               contact Us
             </Link>
           </li>
-          <li>Cart</li>
+          <li className="px-4">Cart</li>
           <button
             className="login-btn"
             onClick={() => {
