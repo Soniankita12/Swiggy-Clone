@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Res_List_Api } from "../../utils/constants";
 import { Link } from "react-router-dom";
-import RestaurantCard from "./ReturantCard";
+import RestaurantCard, { withPromotedLable } from "./ReturantCard";
 import ShimmerUi from "./ShimmerUi";
 import useOnlineStatus from "../../utils/useOnlineStatus";
 const Body = () => {
@@ -12,6 +12,8 @@ const Body = () => {
   const [listOfRestaurants, setlistOfRestaurants] = arr;
   const [filteredRestraunt, setfilteredRestraunt] = useState([]);
   const [searchText, setsearchText] = useState("");
+  const RestaurantCardPromoted =withPromotedLable(RestaurantCard);
+  console.log("data",listOfRestaurants);
   useEffect(() => {
     fetchData();
   }, []);
@@ -92,7 +94,12 @@ const Body = () => {
             className="link"
             key={restaurant.info.id}
             to={"/restaurants/" + restaurant.info.id}>
-            <RestaurantCard resData={restaurant} />
+            {restaurant.info.isOpen ? (
+              <RestaurantCardPromoted resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
+            
           </Link>
         ))}
       </div>
