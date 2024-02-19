@@ -1,5 +1,5 @@
 const RestaurantCard = (props) => {
-  console.log(props);
+  // console.log(props);
   const { resData } = props;
   const {
     name,
@@ -29,12 +29,14 @@ const RestaurantCard = (props) => {
 
 // higher order component
 // it takes input as =>resturant card =>Promoted restaurantcard
-export const withPromotedLable =(RestaurantCard) =>{
-  return (props)=>{
-    return(<div>
-      <label className="absolute bg-green-500  p-2 rounded-lg">Promoted</label>
-      <RestaurantCard {...props}/>
-      </div>);
-  }
-}
+export const withPromotedLable = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label className="absolute bg-green-500 p-2 rounded-lg">Promoted</label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
+};
 export default RestaurantCard;
