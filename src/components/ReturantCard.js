@@ -9,6 +9,7 @@ const RestaurantCard = (props) => {
     deliveryTime,
     cloudinaryImageId,
   } = resData?.info;
+
   return (
     <div className="m-4 p-4 w-[250] cursor-pointer rounded-lg bg-gray-100 h-max hover:bg-gray-300 ">
       <img
@@ -39,4 +40,5 @@ export const withPromotedLable = (RestaurantCard) => {
     );
   };
 };
+
 export default RestaurantCard;

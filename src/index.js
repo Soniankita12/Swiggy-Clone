@@ -7,10 +7,9 @@ import About from "./components/About";
 import ContactUs from "./components/ContactUs";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
+
 //lazy loading
-const Groceries = lazy(() => 
-  import("./components/Groceries")
-);
+const Groceries = lazy(() => import("./components/Groceries"));
 
 const AppLayout = () => {
   return (
@@ -41,6 +40,6 @@ const appRouter = createBrowserRouter([
     errorElement: <Error />,
   },
 ]);
-const root = ReactDOM.createRoot(document.getElementById("root"));
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter} />);

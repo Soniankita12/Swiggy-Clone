@@ -1,5 +1,3 @@
-
-
 const ContactUs = () => {
   return (
     <div>
@@ -7,4 +5,5 @@ const ContactUs = () => {
     </div>
   );
 };
+
 export default ContactUs;

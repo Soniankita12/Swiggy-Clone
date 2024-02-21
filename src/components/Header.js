@@ -6,8 +6,9 @@ import useOnlineStatus from "../../utils/useOnlineStatus";
 const Header = () => {
   const [btnName, setbtnName] = useState("Sign in");
   const OnlineStatus = useOnlineStatus();
+
   return (
-    <div className=" flex justify-between bg-pink-100 shadow-lg m-2">
+    <div className=" flex justify-between bg-pink-100 shadow-lg m-2 sticky top-0 z-10">
       <div className="logo-container">
         <img className="w-40" src={LOGO_URL} alt="Food Delivery App" />
       </div>

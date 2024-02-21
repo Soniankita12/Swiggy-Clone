@@ -3,26 +3,22 @@ class UserClass extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-    userInfo:{name:"dummy name"
-  ,location:"Default"},
+      userInfo: { name: "dummy name", location: "Default" },
     };
+  }
+  async componentDidMount() {
+    const data = await fetch("https://api.github.com/users/soniankita12");
+    const json = await data.json();
+    this.setState({ userInfo: json });
+  }
+  componentWillUnmount() {}
 
-  }
- async componentDidMount(){
-  const data = await fetch("https://api.github.com/users/soniankita12");
-  const json= await data.json();
-  this.setState({userInfo:json});
-   
-  }
-  componentWillUnmount(){
-    
-  }
   render() {
     const { name, location, company, avatar_url } = this.state.userInfo;
     return (
       <div className="user-card">
         <h2>{name}</h2>
-        <img src={avatar_url}/>
+        <img src={avatar_url} />
         <h2>{location}</h2>
         <h2>{company}</h2>
 
@@ -34,6 +30,7 @@ class UserClass extends React.Component {
     );
   }
 }
+
 export default UserClass;
 /* 
 mounting life cycle

@@ -1,13 +1,15 @@
 import { useState } from "react";
-const User = (props) => {
-    const [count] =useState(0);
-    const [count2] = useState(0);
 
-    async  function fetchdata(){
-      const data = await fetch("https://api.github.com/users/soniankita12");
-const json = await data.json();
-console.log(json);
-    }
+const User = (props) => {
+  const [count] = useState(0);
+  const [count2] = useState(0);
+
+  async function fetchdata() {
+    const data = await fetch("https://api.github.com/users/soniankita12");
+    const json = await data.json();
+    console.log(json);
+  }
+
   return (
     <div className="user-card">
       <h2>{props.name}</h2>

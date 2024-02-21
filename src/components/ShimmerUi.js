@@ -16,4 +16,5 @@ const ShimmerUi = () => {
     </div>
   );
 };
+
 export default ShimmerUi;

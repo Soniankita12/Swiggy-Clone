@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import RestaurantCard, { withPromotedLable } from "./ReturantCard";
 import ShimmerUi from "./ShimmerUi";
 import useOnlineStatus from "../../utils/useOnlineStatus";
+
 const Body = () => {
   // State variable(super powered react variable(by using hooks))
   //   const [listOfRestaurants, listOfRestaurants] = useState(resList);
@@ -12,16 +13,14 @@ const Body = () => {
   const [listOfRestaurants, setlistOfRestaurants] = arr;
   const [filteredRestraunt, setfilteredRestraunt] = useState([]);
   const [searchText, setsearchText] = useState("");
-  const RestaurantCardPromoted =withPromotedLable(RestaurantCard);
-  console.log("data",listOfRestaurants);
+  const RestaurantCardPromoted = withPromotedLable(RestaurantCard);
+  console.log("data", listOfRestaurants);
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(
-     Res_List_Api
-    );
+    const data = await fetch(Res_List_Api);
 
     const json = await data.json();
     console.log(json);
@@ -34,9 +33,13 @@ const Body = () => {
       json?.data?.cards[1]?.card?.card?.gridElements.infoWithStyle.restaurants
     );
   };
-  const OnlineStatus =useOnlineStatus();
-  if(OnlineStatus === false)
-  return (<div><h1>you are offline</h1></div>);
+  const OnlineStatus = useOnlineStatus();
+  if (OnlineStatus === false)
+    return (
+      <div>
+        <h1>you are offline</h1>
+      </div>
+    );
   return listOfRestaurants.length === 0 ? (
     <ShimmerUi />
   ) : (
@@ -100,11 +103,11 @@ const Body = () => {
             ) : (
               <RestaurantCard resData={restaurant} />
             )}
-            
           </Link>
         ))}
       </div>
     </div>
   );
 };
+
 export default Body;
