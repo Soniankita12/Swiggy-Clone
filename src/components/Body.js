@@ -28,7 +28,7 @@ const Body = () => {
 
     // Optinal Chaining
     setlistOfRestaurants(
-      json?.data?.cards[1]?.card?.card?.gridElements.infoWithStyle.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle.restaurants
     );
     setfilteredRestraunt(
       json?.data?.cards[1]?.card?.card?.gridElements.infoWithStyle.restaurants
