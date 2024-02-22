@@ -1,13 +1,24 @@
+import { useState } from "react";
+import ItemList from "./ItemList";
+
 const RestaurantCategory = ({ data }) => {
-  console.log("datain", data);
+  const [showItem,setshowItem] =useState(false);
+  const handleClick =()=>{
+console.log("buttton clicked");
+
+setshowItem(!showItem);
+  }
   return (
     <div>
       {/* header */}
-      <div className="w-6/12 mx-auto my-4 bg-gray-50 shadow-lg p-4 flex justify-between">
-        <span className="font-bold">
-          {data?.title}({data.itemCards.length})
-        </span>
-        <span>⏬</span>
+      <div className="w-6/12 mx-auto my-4 bg-gray-50 shadow-lg p-4 ">
+        <div className="flex justify-between cursor-pointer" onClick={handleClick}>
+          <span className="font-bold">
+            {data?.title}({data.itemCards.length})
+          </span>
+          <span>⏬</span>
+        </div>
+       {showItem && <ItemList items={data.itemCards} />}
       </div>
 
       {/* Accordian data */}

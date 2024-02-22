@@ -30,17 +30,8 @@ const RestaurantMenu = () => {
       <h3 className="text-lg font-light my-4">{cuisines.join(", ")}</h3>
       <h2>Menu</h2>
       {categories.map((category) => (
-        <RestaurantCategory data={category?.card?.card} />
+        <RestaurantCategory  key ={category.card.card.id}data={category?.card?.card} />
       ))}
-      <ul>
-        {itemCards.map((item) => (
-          <li key={item.card.info.id}>
-            {item.card.info.name}-{" "}
-            {"₹" +
-              (item.card.info.defaultPrice / 100 || item.card.info.price / 100)}
-          </li>
-        ))}
-      </ul>
       {/* Accordian items*/}
     </div>
   );
