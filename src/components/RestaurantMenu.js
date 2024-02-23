@@ -2,10 +2,13 @@ import { useParams } from "react-router-dom";
 import ShimmerUi from "./ShimmerUi";
 import useRestaurantMenu from "../../utils/useRestaurantMenu";
 import RestaurantCategory from "./RestaurantCategory";
+import { useState } from "react/cjs/react.production.min";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
   const resInfo = useRestaurantMenu(resId);
+
+  const [showIndex,setshowIndex]= useState(0);
 
   const { name, cuisines, costForTwo, avgRating } =
     resInfo?.cards[2]?.card?.card?.info || {};
@@ -29,8 +32,8 @@ const RestaurantMenu = () => {
       <h1 className="text-3xl font-bold my-4">{name}</h1>
       <h3 className="text-lg font-light my-4">{cuisines.join(", ")}</h3>
       <h2>Menu</h2>
-      {categories.map((category) => (
-        <RestaurantCategory  key ={category.card.card.id}data={category?.card?.card} />
+      {categories.map((category,index) => (
+        <RestaurantCategory  key ={category.card.card.id}data={category?.card?.card}  showItem={index=== showIndex ?true :false}/>
       ))}
       {/* Accordian items*/}
     </div>
