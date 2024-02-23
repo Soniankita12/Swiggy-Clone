@@ -2,19 +2,23 @@ import { useParams } from "react-router-dom";
 import ShimmerUi from "./ShimmerUi";
 import useRestaurantMenu from "../../utils/useRestaurantMenu";
 import RestaurantCategory from "./RestaurantCategory";
-import { useState } from "react/cjs/react.production.min";
+import { useState } from "react";
 
 const RestaurantMenu = () => {
+
   const { resId } = useParams();
+
   const resInfo = useRestaurantMenu(resId);
 
-  const [showIndex,setshowIndex]= useState(0);
+  const [showIndex, setshowIndex] = useState(null);
 
   const { name, cuisines, costForTwo, avgRating } =
     resInfo?.cards[2]?.card?.card?.info || {};
+
   const { itemCards } =
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
       ?.card || {};
+
   const categories =
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
@@ -25,6 +29,7 @@ const RestaurantMenu = () => {
   console.log(
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
   );
+
   return resInfo === null ? (
     <ShimmerUi />
   ) : (
@@ -32,8 +37,13 @@ const RestaurantMenu = () => {
       <h1 className="text-3xl font-bold my-4">{name}</h1>
       <h3 className="text-lg font-light my-4">{cuisines.join(", ")}</h3>
       <h2>Menu</h2>
-      {categories.map((category,index) => (
-        <RestaurantCategory  key ={category.card.card.id}data={category?.card?.card}  showItem={index=== showIndex ?true :false}/>
+      {categories.map((category, index) => (
+        <RestaurantCategory
+          key={category.card.card.id}
+          data={category?.card?.card}
+          showItem={index === showIndex ? true : false}
+          setshowIndex={() => setshowIndex(index)}
+        />
       ))}
       {/* Accordian items*/}
     </div>
