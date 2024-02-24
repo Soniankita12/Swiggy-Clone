@@ -49,3 +49,13 @@ a class based components is a class which extend react.component and it has a re
 
 ** functional Based component
 functinal component is a fun that return some jsx
+
+
+# Redux Toolkit (RTK)
+ -Install @reduxjs/toolkit and react-redux
+ -Build our store
+ -connect our store to our app
+ -build our slice(cart-slice)
+ -dispatch(action)
+ -selector
+ 

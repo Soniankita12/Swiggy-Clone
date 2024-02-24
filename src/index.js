@@ -7,6 +7,7 @@ import About from "./components/About";
 import ContactUs from "./components/ContactUs";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
+import {provider} from 'react-redux';
 
 //lazy loading
 const Groceries = lazy(() => import("./components/Groceries"));
