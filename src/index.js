@@ -7,17 +7,20 @@ import About from "./components/About";
 import ContactUs from "./components/ContactUs";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
-import {provider} from 'react-redux';
+import { provider } from "react-redux";
+import appStore from "../utils/appStore";
 
 //lazy loading
 const Groceries = lazy(() => import("./components/Groceries"));
 
 const AppLayout = () => {
   return (
-    <div className="app">
-      <Header />
-      <Outlet />
-    </div>
+    <provider store={appStore}>
+      <div className="app">
+        <Header />
+        <Outlet />
+      </div>
+    </provider>
   );
 };
 const appRouter = createBrowserRouter([
