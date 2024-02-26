@@ -7,7 +7,7 @@ import About from "./components/About";
 import ContactUs from "./components/ContactUs";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
-import { provider } from "react-redux";
+import { Provider } from "react-redux";
 import appStore from "../utils/appStore";
 
 //lazy loading
@@ -15,12 +15,12 @@ const Groceries = lazy(() => import("./components/Groceries"));
 
 const AppLayout = () => {
   return (
-    <provider store={appStore}>
+    <Provider store={appStore}>
       <div className="app">
         <Header />
         <Outlet />
       </div>
-    </provider>
+    </Provider>
   );
 };
 const appRouter = createBrowserRouter([
