@@ -46,7 +46,9 @@ const Header = () => {
             </Link>
           </li>
           <li className=" flex px-4 font-bold text-xl">
-            <FaCartShopping /> Cart ({cartItems.length}items)
+            <Link to="/cart">
+              <FaCartShopping /> Cart ({cartItems.length}items)
+            </Link>
           </li>
           <button
             className="login-btn"
