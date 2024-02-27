@@ -58,4 +58,9 @@ functinal component is a fun that return some jsx
  -build our slice(cart-slice)
  -dispatch(action)
  -selector
+
+ # when you subscribe a store using useSelector make sure you subscribe to a right store
  
+ # Immer (redux use this)
+
+ # redux-devtool
