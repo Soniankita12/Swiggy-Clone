@@ -16,8 +16,8 @@ describe('', () => {
       //Assertion
       expect(butto).toBeInTheDocument();
     });
-
-    test("should load 2 input box", () => {
+// it is an alias for test no special thing 
+    it("should load 2 input box", () => {
       render(<ContactUs />);
       const inputbtn = screen.getAllByRole("textbox");
       //Assertion
