@@ -1,4 +1,4 @@
-#namaste React ❤️🧠
+# Swiggy Clone ❤️🧠
 
 #parcel
 -Dev Build
@@ -64,3 +64,17 @@ functinal component is a fun that return some jsx
  # Immer (redux use this)
 
  # redux-devtool
+
+ # Type of testing (as a developer)
+  1-Unit testing
+  2-Integration testing
+  3-End to End Testing (e2e testing)
+
+  React Testing Library(use Jest)
+  Jest
+  # Setting up Testing in our app
+   -Install React Testing Library
+   -Install Jest
+   -Installed Babel dependencies and configured babel 
+   -configure parcel config to disable default babel transpilation
+   -Jest Configuration( npx jest --init )
