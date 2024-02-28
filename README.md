@@ -78,3 +78,7 @@ functinal component is a fun that return some jsx
    -Installed Babel dependencies and configured babel 
    -configure parcel config to disable default babel transpilation
    -Jest Configuration( npx jest --init )
+   -install jsdom library
+   --Install @babel/preset-react -to make jsx work in test cases
+   -include @bable/preset-react inside my babel config
+   -Install @testing-library/jest-dom
