@@ -1,11 +1,10 @@
 import ItemList from "./ItemList";
 
 const RestaurantCategory = ({ data, showItem, setshowIndex }) => {
-
   const handleClick = () => {
     setshowIndex();
   };
-  
+
   return (
     <div>
       {/* header */}

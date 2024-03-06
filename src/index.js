@@ -32,7 +32,7 @@ const appRouter = createBrowserRouter([
       { path: "/", element: <Body /> },
       { path: "/about", element: <About /> },
       { path: "/contact", element: <ContactUs /> },
-      {path:"/cart",element:<Cart/>},
+      { path: "/cart", element: <Cart /> },
       {
         path: "/groceries",
         element: (

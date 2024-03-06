@@ -1,7 +1,7 @@
 import { IoMdClose } from "react-icons/io";
 import { FaRegCopy } from "react-icons/fa";
-const PopupModal = ({onClose}) => {
-    const email ="Ankitasoni2211104@gmail.com"
+const PopupModal = ({ onClose }) => {
+  const email = "Ankitasoni2211104@gmail.com";
   return (
     <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center">
       <div className="flex flex-col gap-5 ">

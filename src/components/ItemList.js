@@ -31,7 +31,7 @@ const ItemList = ({ items }) => {
             <div className="absolute">
               <button
                 className="border border-inherit p-2 mx-16  bg-green-500 shadow-lg absolute rounded-lg "
-                onClick={()=>handleAddItem(item)}>
+                onClick={() => handleAddItem(item)}>
                 Add+
               </button>
             </div>

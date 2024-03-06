@@ -21,7 +21,9 @@ class About extends Component {
       <div>
         <h1>About</h1>
         <div>
-          <UserContext.Consumer>{(data)=>(<h1>{data.loggedInUser +" hiiiii"}</h1>)}</UserContext.Consumer>
+          <UserContext.Consumer>
+            {(data) => <h1>{data.loggedInUser + " hiiiii"}</h1>}
+          </UserContext.Consumer>
         </div>
         <h2>this is ankita soni learning react</h2>
         <User name="Ankita Soni (function)" />

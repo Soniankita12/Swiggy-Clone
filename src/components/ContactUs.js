@@ -35,8 +35,12 @@ const ContactUs = () => {
               />
             </div>
             <div>
-              <button className=" w-52 border border-inherit mx-2 my-4 p-2 bg-green-500 rounded-lg"  onClick={(event)=> {event. preventDefault();
-              alert("form submitted")}}>
+              <button
+                className=" w-52 border border-inherit mx-2 my-4 p-2 bg-green-500 rounded-lg"
+                onClick={(event) => {
+                  event.preventDefault();
+                  alert("form submitted");
+                }}>
                 Submit
               </button>
             </div>
@@ -50,7 +54,7 @@ const ContactUs = () => {
             Get Email Address
           </button>
           {showModel && (
-            <PopupModal 
+            <PopupModal
               onClose={() => {
                 setshowModel(false);
                 console.log("closedd");

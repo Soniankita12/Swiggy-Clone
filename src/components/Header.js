@@ -1,21 +1,20 @@
 import { Link } from "react-router-dom";
-import { useState ,useContext} from "react";
+import { useState, useContext } from "react";
 import { LOGO_URL } from "../../utils/constants";
 import useOnlineStatus from "../../utils/useOnlineStatus";
 import UserContext from "./UserContext";
 import { FaCartShopping } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 
-
 const Header = () => {
   const [btnName, setbtnName] = useState("Sign in");
 
-  const {loggedInUser} = useContext(UserContext);
+  const { loggedInUser } = useContext(UserContext);
   console.log("user");
   const OnlineStatus = useOnlineStatus();
 
   //selector h react hook -subscribing our store using selector
-  const cartItems = useSelector((store)=> store.cart.items);
+  const cartItems = useSelector((store) => store.cart.items);
 
   return (
     <div className=" flex justify-between bg-pink-100 shadow-lg m-2 sticky top-0 z-10">
