@@ -1,6 +1,7 @@
 import { IoMdClose } from "react-icons/io";
 import { FaRegCopy } from "react-icons/fa";
 const PopupModal = ({onClose}) => {
+    const email ="Ankitasoni2211104@gmail.com"
   return (
     <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center">
       <div className="flex flex-col gap-5 ">
@@ -13,12 +14,17 @@ const PopupModal = ({onClose}) => {
             Email Address
           </h1>
           <div className="flex justify-between">
-            <p className="border border-gray-400 rounded-lg m-2 p-2">
-              Ankitasoni221104@gmail.com
+            <p  value={email} className="border border-gray-400 rounded-lg m-2 p-2">
+             {email}
             </p>
-            <button className="border border-gray-400 rounded-lg m-2 p-2 flex items-center justify-center gap-2">
-              Copy 
-               <FaRegCopy />
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(email);
+    
+              }}
+              className="border border-gray-400 rounded-lg m-2 p-2 flex items-center justify-center gap-2">
+              Copy
+              <FaRegCopy />
             </button>
           </div>
         </div>

@@ -36,15 +36,23 @@ const ContactUs = () => {
                 Submit
               </button>
             </div>
-            <button
-              onClick={() =>{ setshowModel(true);
-              console.log("Popup closed");}}
-              className=" w-52 border border-inherit mx-2 my-6 p-2 bg-green-500 rounded-lg">
-              Get Email Address
-            </button>
-            {showModel && <PopupModal  onClose={()=>{ setshowModel(false);
-            console.log("closedd")}}/>}
           </form>
+          <button
+            onClick={() => {
+              setshowModel(true);
+              console.log("Popup closed");
+            }}
+            className=" w-52 border border-inherit mx-2 my-6 p-2 bg-green-500 rounded-lg">
+            Get Email Address
+          </button>
+          {showModel && (
+            <PopupModal
+              onClose={() => {
+                setshowModel(false);
+                console.log("closedd");
+              }}
+            />
+          )}
         </div>
 
         <img className="w-6/12 h-full mx-14" src={Contact_Img} />
