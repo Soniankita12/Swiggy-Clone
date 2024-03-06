@@ -15,6 +15,7 @@ const ContactUs = () => {
                 className="w-52 border border-inherit m-2 p-2"
                 type="text"
                 placeholder="👤Name"
+                required
               />
             </div>
             <div>
@@ -22,6 +23,7 @@ const ContactUs = () => {
                 className=" w-52 border border-inherit m-2 p-2"
                 type="text"
                 placeholder="📝Message"
+                required
               />
             </div>
             <div>
@@ -29,10 +31,12 @@ const ContactUs = () => {
                 type="email"
                 placeholder="📧Email"
                 className=" w-52 border border-inherit m-2 p-2"
+                required
               />
             </div>
             <div>
-              <button className=" w-52 border border-inherit mx-2 my-4 p-2 bg-green-500 rounded-lg">
+              <button className=" w-52 border border-inherit mx-2 my-4 p-2 bg-green-500 rounded-lg"  onClick={(event)=> {event. preventDefault();
+              alert("form submitted")}}>
                 Submit
               </button>
             </div>
@@ -46,7 +50,7 @@ const ContactUs = () => {
             Get Email Address
           </button>
           {showModel && (
-            <PopupModal
+            <PopupModal 
               onClose={() => {
                 setshowModel(false);
                 console.log("closedd");

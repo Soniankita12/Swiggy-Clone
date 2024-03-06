@@ -14,15 +14,16 @@ const PopupModal = ({onClose}) => {
             Email Address
           </h1>
           <div className="flex justify-between">
-            <p  value={email} className="border border-gray-400 rounded-lg m-2 p-2">
-             {email}
+            <p
+              value={email}
+              className="border border-gray-400 rounded-lg m-2 p-2">
+              {email}
             </p>
             <button
               onClick={() => {
                 navigator.clipboard.writeText(email);
-    
               }}
-              className="border border-gray-400 rounded-lg m-2 p-2 flex items-center justify-center gap-2">
+              className="border border-gray-400 rounded-lg m-2 p-2 flex items-center justify-center gap-2 focus:outline-none focus:ring focus:ring-pink-300 ...">
               Copy
               <FaRegCopy />
             </button>
