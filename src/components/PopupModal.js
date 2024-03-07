@@ -24,7 +24,7 @@ const PopupModal = ({ onClose }) => {
                 navigator.clipboard.writeText(email);
                 alert("Email Address Copied");
               }}
-              className="border border-gray-400 rounded-lg m-2 p-2 flex items-center justify-center gap-2 focus:outline-none focus:ring focus:ring-pink-300 ...">
+              className="animate-pulse border border-gray-400 rounded-lg m-2 p-2 flex items-center justify-center gap-2 focus:outline-none focus:ring focus:ring-pink-300 ...">
               Copy
               <FaRegCopy />
             </button>

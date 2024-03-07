@@ -5,6 +5,10 @@ import useOnlineStatus from "../../utils/useOnlineStatus";
 import UserContext from "./UserContext";
 import { FaCartShopping } from "react-icons/fa6";
 import { useSelector } from "react-redux";
+import { TiHome } from "react-icons/ti";
+import { GiGrain } from "react-icons/gi";
+import { IoCall } from "react-icons/io5";
+import { IoIosPeople } from "react-icons/io";
 
 const Header = () => {
   const [btnName, setbtnName] = useState("Sign in");
@@ -23,29 +27,42 @@ const Header = () => {
       </div>
       <div className="flex items-center ">
         <ul className="flex p-4 m-4 ">
-          <li className="px-4">{OnlineStatus ? "🟢online" : "🔴offline"} </li>
-          <li className="px-4">
-            <Link to="/" className="font-bold text-xl">
-              Home
+          <li className="px-4 animate-pulse">
+            {OnlineStatus ? "🟢online" : "🔴offline"}{" "}
+          </li>
+          <li className="px-4 ">
+            <Link
+              to="/"
+              className="font-bold text-xl flex items-center justify-center ">
+              <TiHome /> Home
             </Link>
           </li>
           <li className="px-4">
-            <Link to="/groceries" className="font-bold text-xl">
-              Groceries
+            <Link
+              to="/groceries"
+              className="font-bold text-xl flex items-center justify-center">
+              <GiGrain /> Groceries
             </Link>
           </li>
           <li className="px-4">
-            <Link to="/about" className="font-bold text-xl">
+            <Link
+              to="/about"
+              className="font-bold text-xl flex items-center justify-center">
+              <IoIosPeople />
               About Us
             </Link>
           </li>
           <li className="px-4">
-            <Link to="/contact" className="font-bold text-xl">
-              contact Us
+            <Link
+              to="/contact"
+              className="font-bold text-xl flex items-center justify-center">
+              <IoCall /> contact Us
             </Link>
           </li>
-          <li className=" flex px-4 font-bold text-xl">
-            <Link to="/cart">
+          <li className="  px-4 ">
+            <Link
+              to="/cart"
+              className=" font-bold text-xl flex items-center justify-center">
               <FaCartShopping /> Cart ({cartItems.length}items)
             </Link>
           </li>
