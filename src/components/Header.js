@@ -33,21 +33,21 @@ const Header = () => {
           <li className="px-4 ">
             <Link
               to="/"
-              className="font-bold text-xl flex items-center justify-center ">
+              className="font-bold text-xl flex items-center justify-center gap-2 ">
               <TiHome /> Home
             </Link>
           </li>
           <li className="px-4">
             <Link
               to="/groceries"
-              className="font-bold text-xl flex items-center justify-center">
+              className="font-bold text-xl flex items-center justify-center gap-2">
               <GiGrain /> Groceries
             </Link>
           </li>
           <li className="px-4">
             <Link
               to="/about"
-              className="font-bold text-xl flex items-center justify-center">
+              className="font-bold text-xl flex items-center justify-center gap-2">
               <IoIosPeople />
               About Us
             </Link>
@@ -55,14 +55,14 @@ const Header = () => {
           <li className="px-4">
             <Link
               to="/contact"
-              className="font-bold text-xl flex items-center justify-center">
+              className="font-bold text-xl flex items-center justify-center gap-2">
               <IoCall /> contact Us
             </Link>
           </li>
           <li className="  px-4 ">
             <Link
               to="/cart"
-              className=" font-bold text-xl flex items-center justify-center">
+              className=" font-bold text-xl flex items-center justify-center gap-2">
               <FaCartShopping /> Cart ({cartItems.length}items)
             </Link>
           </li>

@@ -21,7 +21,7 @@ const Carousel = () => {
         </button>
       </div>
       <h1 className="animate-bounce font-extrabold text-5xl text-green-500 text-center">
-        comeing Soon !
+        coming Soon !
       </h1>
     </div>
   );

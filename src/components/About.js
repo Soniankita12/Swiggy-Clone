@@ -4,22 +4,10 @@ import UserContext from "./UserContext";
 import { Component } from "react";
 
 class About extends Component {
-  constructor(props) {
-    super(props);
-    console.log(" parent constructor ");
-  }
-
-  componentDidMount() {
-    console.log("parent did mount");
-    // Api call here because it will called after mounting
-  }
-
   render() {
-    console.log(" parent render");
-
     return (
       <div>
-        <h1>About</h1>
+        <h1 className="text-center ">About Me</h1>
         <div>
           <UserContext.Consumer>
             {(data) => <h1>{data.loggedInUser + " hiiiii"}</h1>}
@@ -29,11 +17,6 @@ class About extends Component {
         <User name="Ankita Soni (function)" />
         <UserClass
           name="Ankita soni(class) "
-          location="Bangalore(C)"
-          designation="SDE1(class)"
-        />
-        <UserClass
-          name="Ankita (class) "
           location="Bangalore(C)"
           designation="SDE1(class)"
         />

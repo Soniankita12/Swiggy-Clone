@@ -16,7 +16,11 @@ const Cart = () => {
       </div>
 
       {cartItem.length === 0 ? (
-        <h1>your cart is Empty please add</h1>
+        <div className="flex justify-center m-20 p-20 ">
+          <h1 className="font-bold text-5xl text-green-500 animate-bounce">
+            your cart is Empty please add
+          </h1>
+        </div>
       ) : (
         <button
           onClick={handleClearcart}
