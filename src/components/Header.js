@@ -25,9 +25,6 @@ const Header = () => {
       </div>
       <div className="flex items-center ">
         <ul className="flex p-4 m-4 ">
-          <li className="px-4 animate-pulse">
-            {OnlineStatus ? "🟢online" : "🔴offline"}{" "}
-          </li>
           <li className="px-4 ">
             <Link
               to="/"
@@ -63,6 +60,9 @@ const Header = () => {
               className=" font-bold text-xl flex items-center justify-center gap-2">
               <FaCartShopping /> Cart ({cartItems.length}items)
             </Link>
+          </li>
+          <li className="px-4 animate-pulse">
+            {OnlineStatus ? "🟢" : "🔴"}{" "}
           </li>
           <button
             className="login-btn"
