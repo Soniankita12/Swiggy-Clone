@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import { useState, useContext } from "react";
+import { useState } from "react";
 import { LOGO_URL } from "../../utils/constants";
 import useOnlineStatus from "../../utils/useOnlineStatus";
-import UserContext from "./UserContext";
 import { FaCartShopping } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 import { TiHome } from "react-icons/ti";
@@ -13,7 +12,6 @@ import { IoIosPeople } from "react-icons/io";
 const Header = () => {
   const [btnName, setbtnName] = useState("Sign in");
 
-  const { loggedInUser } = useContext(UserContext);
   console.log("user");
   const OnlineStatus = useOnlineStatus();
 
@@ -74,7 +72,6 @@ const Header = () => {
                 : setbtnName("Sign in");
             }}>
             {btnName}
-            {loggedInUser}
           </button>
         </ul>
       </div>
