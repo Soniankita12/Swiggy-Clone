@@ -42,7 +42,9 @@ const Body = () => {
       </div>
     );
   return listOfRestaurants.length === 0 ? (
-    <ShimmerUi />
+    <div>
+      <ShimmerUi />
+    </div>
   ) : (
     <div className="">
       <div className="filter flex">
