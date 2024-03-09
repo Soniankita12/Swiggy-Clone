@@ -1,7 +1,7 @@
 import { IoMdClose } from "react-icons/io";
 import { FaRegCopy } from "react-icons/fa";
 import { useRef } from 'react';
-const PopupModal = ({ onClose }) => {
+const PopupModal = ({ onClose ,Text}) => {
   const email = "Ankitasoni2211104@gmail.com";
   const Popupref =useRef();
   const closePopup = (e)=>{
@@ -18,7 +18,7 @@ const PopupModal = ({ onClose }) => {
 
         <div className="bg-pink-200  p-6 border border-indigo-200 rounded-xl ">
           <h1 className="font-extrabold text-3xl text-center p-4 m-2">
-            Email Address
+           {Text}
           </h1>
           <div className="flex justify-between">
             <p

@@ -5,14 +5,36 @@ class UserClass extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      userInfo: { name: "dummy name", location: "Default", showModel: false },
+      userInfo: {
+        name: "dummy name",
+        location: "Default",
+        showModel: false,
+        showText: "",
+      },
     };
 
     this.handleShowModal = this.handleShowModal.bind(this);
+     this.handleShowText = this.handleShowText.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
   handleShowModal() {
+    this.setState((prevState) => ({
+      userInfo: { ...prevState.userInfo, showModel: true },
+    }));
+    this.setState((prevState) => ({
+      userInfo: { ...prevState.userInfo, showText: "Email me" },
+    }));
+  }
+
+    handleShowText() {
+    
+    this.setState((prevState) => ({
+      userInfo: {
+        ...prevState.userInfo,
+        showText: "Your feedback is immensely appreciated.",
+      },
+    }));
     this.setState((prevState) => ({
       userInfo: { ...prevState.userInfo, showModel: true },
     }));
@@ -33,7 +55,7 @@ class UserClass extends React.Component {
 
   render() {
     const { name, location, company, avatar_url } = this.state.userInfo;
-    const { showModel } = this.state.userInfo;
+    const { showModel, showText } = this.state.userInfo;
     return (
       <div className="">
         <div className=" border border-inherit rounded-3xl mx-96 my-4 p-10  ">
@@ -66,15 +88,13 @@ class UserClass extends React.Component {
             Send Email
           </button>
           <button
-            onClick={() =>
-              alert(
-                " \" I truly value your perspective. If you have a moment, could you kindly share your thoughts? Your feedback is immensely appreciated.\""
-              )
-            }
+            onClick={this.handleShowText}
             className="border border-inherit w-48 m-2 p-2 bg-green-500 rounded-lg">
             Send Feedback
           </button>
-          {showModel && <PopupModal onClose={this.handleCloseModal} />}
+          {showModel && (
+            <PopupModal Text={showText} onClose={this.handleCloseModal} />
+          )}
         </div>
       </div>
     );

@@ -54,7 +54,7 @@ const ContactUs = () => {
             Get Email Address
           </button>
           {showModel && (
-            <PopupModal
+            <PopupModal Text={"Email Address"}
               onClose={() => {
                 setshowModel(false);
                 console.log("closedd");
