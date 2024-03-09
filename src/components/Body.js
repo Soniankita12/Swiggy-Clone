@@ -43,7 +43,7 @@ const Body = () => {
   return listOfRestaurants.length === 0 ? (
     <ShimmerUi />
   ) : (
-    <div className="body">
+    <div className="">
       <div className="filter flex">
         <div className="m-2 p-2">
           <input
@@ -92,7 +92,7 @@ const Body = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-between mx-4">
         {filteredRestraunt.map((restaurant) => (
           <Link
             className="link"
