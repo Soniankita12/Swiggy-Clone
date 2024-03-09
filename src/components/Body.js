@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import RestaurantCard, { withPromotedLable } from "./ReturantCard";
 import ShimmerUi from "./ShimmerUi";
 import useOnlineStatus from "../../utils/useOnlineStatus";
+import { CiSearch } from "react-icons/ci";
 
 const Body = () => {
   // State variable(super powered react variable(by using hooks))
@@ -49,10 +50,11 @@ const Body = () => {
           <input
             type="text"
             value={searchText}
+            placeholder={" 🔍 Search restaurant"}
             onChange={(e) => {
               setsearchText(e.target.value);
             }}
-            className=" border border-inherit"
+            className=" border border-inherit p-1"
           />
           <button
             className="cursor-pointer px-4 py-1 m-4 bg-green-500 rounded-lg"
