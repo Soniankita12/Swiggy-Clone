@@ -11,7 +11,7 @@ const Cart = () => {
   };
   return (
     <div className="text-center m-4 p-4">
-      <h1 className="text-2xl font-bold">Cart</h1>
+      <h1 className="text-3xl font-bold">Cart</h1>
       <div className="w-6/12 m-auto">
         <ItemList items={cartItem} />
       </div>
@@ -21,10 +21,10 @@ const Cart = () => {
           <h1 className="font-bold text-5xl text-green-500 animate-bounce">
             your cart is Empty please add
           </h1>
-          <button className="border border-inherit bg-green-500 w-40 m-2 p-2 rounded-lg">
+          <button className="border border-inherit bg-green-500 w-40 m-28 p-2 rounded-lg">
             <Link
               to="/"
-              className=" flex items-center justify-center gap-2 ">
+              className=" flex items-center justify-center  ">
                  Go to Home
             </Link>
           </button>
