@@ -12,21 +12,21 @@ const RestaurantMenu = () => {
   const [showIndex, setshowIndex] = useState(null);
 
   const { name, cuisines, costForTwo, avgRating } =
-    resInfo?.cards[0]?.card?.card?.info || {};
+    resInfo?.cards[2]?.card?.card?.info || {};
 
   const { itemCards } =
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
       ?.card || {};
 
   const categories =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
         c.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
   console.log("categories", categories);
   console.log(
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
   );
 
   return resInfo === null ? (
